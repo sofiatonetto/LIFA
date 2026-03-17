@@ -47,7 +47,6 @@
     overflow-x: hidden;
   }
 
-  /* ─── SIDEBAR ─── */
   #sidebar {
     width: var(--sidebar-w);
     min-height: 100vh;
@@ -150,7 +149,6 @@
   .user-name { font-size: 13px; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .user-role { font-size: 11px; color: var(--text-muted); }
 
-  /* ─── MAIN ─── */
   #main {
     margin-left: var(--sidebar-w);
     flex: 1;
@@ -161,7 +159,6 @@
     gap: 24px;
   }
 
-  /* ─── HEADER BANNER ─── */
   .page-header {
     background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1a4080 100%);
     border-radius: 20px;
@@ -220,7 +217,6 @@
   .header-stat-val { font-size: 22px; font-weight: 700; color: white; line-height: 1; }
   .header-stat-lbl { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 3px; letter-spacing: 0.5px; }
 
-  /* ─── CARDS & CONTENT ─── */
   .content-card {
     background: var(--card);
     border-radius: var(--radius);
@@ -245,13 +241,11 @@
   .card-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
   .divider { height: 1px; background: var(--border); margin: 20px 0; }
 
-  /* ─── GRID ─── */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
   .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .col-span-2 { grid-column: span 2; }
 
-  /* ─── METRIC CARDS ─── */
   .metric-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -285,7 +279,6 @@
   .metric-delta.up { background: rgba(16,185,129,0.1); color: var(--success); }
   .metric-delta.down { background: rgba(239,68,68,0.1); color: var(--danger); }
 
-  /* ─── BUTTONS ─── */
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 10px 20px; border-radius: var(--radius-sm);
@@ -311,7 +304,6 @@
 
   .btn svg { width: 16px; height: 16px; }
 
-  /* ─── FORMS ─── */
   .form-group { margin-bottom: 18px; }
   .form-label { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; display: block; }
   .form-hint { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
@@ -342,7 +334,6 @@
   .upload-zone p { font-size: 13px; color: var(--text-muted); }
   .upload-zone strong { color: var(--blue); }
 
-  /* ─── TAGS / BADGES ─── */
   .tag {
     display: inline-flex; align-items: center; gap: 5px;
     font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px;
@@ -355,7 +346,6 @@
   .tag-red { background: rgba(239,68,68,0.1); color: #dc2626; }
   .tag-gray { background: rgba(107,114,128,0.1); color: #6b7280; }
 
-  /* ─── TABLE ─── */
   .table-wrap { overflow-x: auto; }
   table { width: 100%; border-collapse: collapse; }
   thead th {
@@ -368,11 +358,9 @@
   tbody td { padding: 13px 14px; font-size: 13.5px; color: var(--text-primary); border-bottom: 1px solid #f0f2f8; vertical-align: middle; }
   tbody tr:last-child td { border-bottom: none; }
 
-  /* ─── PROGRESS ─── */
   .progress-bar { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
   .progress-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width 0.6s ease; }
 
-  /* ─── CALENDAR ─── */
   .calendar-wrap { user-select: none; }
   .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .cal-title { font-size: 16px; font-weight: 700; color: var(--text-primary); }
@@ -415,7 +403,6 @@
   .event-name { font-size: 13.5px; font-weight: 600; color: var(--text-primary); }
   .event-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-  /* ─── ALOCAÇÃO ─── */
   .collab-card {
     border: 1px solid var(--border); border-radius: var(--radius-sm);
     padding: 16px; display: flex; align-items: center; gap: 14px;
@@ -435,7 +422,6 @@
     background: rgba(16,185,129,0.1); padding: 4px 10px; border-radius: 20px;
   }
 
-  /* ─── DOCS / DETALHE ─── */
   .doc-item {
     display: flex; align-items: center; gap: 14px;
     padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm);
@@ -448,7 +434,6 @@
   .doc-name { font-size: 13.5px; font-weight: 600; color: var(--text-primary); }
   .doc-meta { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
 
-  /* ─── TOAST ─── */
   #toast {
     position: fixed; bottom: 28px; right: 28px;
     background: var(--navy); color: white;
@@ -462,11 +447,9 @@
   #toast.show { transform: translateY(0); opacity: 1; }
   #toast svg { color: var(--cyan); width: 16px; height: 16px; flex-shrink: 0; }
 
-  /* ─── PAGES ─── */
   .page { display: none; }
   .page.active { display: flex; flex-direction: column; gap: 20px; }
 
-  /* ─── SCROLL ─── */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
@@ -479,9 +462,7 @@
 <aside id="sidebar">
   <div class="sidebar-logo">
     <div class="logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-      </svg>
+      <img src="FOTO PERFIL.png" style="width: 50px;">
     </div>
     <div class="logo-text">
       <div class="logo-title">Smart Lab Hub</div>
@@ -512,7 +493,6 @@
     <button class="nav-item" onclick="navigate('projetos')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       Gestão de Projetos
-      <span class="nav-badge">3</span>
     </button>
 
     <button class="nav-item" onclick="navigate('agenda')">
@@ -530,52 +510,16 @@
       Detalhe do Projeto
     </button>
   </nav>
-
-  <div class="sidebar-footer">
-    <div class="user-card">
-      <div class="user-avatar">SL</div>
-      <div class="user-info">
-        <div class="user-name">Sofia Lima</div>
-        <div class="user-role">Pesquisadora LIFA</div>
-      </div>
-    </div>
-  </div>
 </aside>
 
-<!-- ═══ MAIN ═══ -->
 <main id="main">
 
-  <!-- PAGE: INÍCIO -->
+  <!-- INÍCIO -->
   <div class="page active" id="page-inicio">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">LIFA · Laboratório Ativo</div>
-        <div class="header-title">Smart Lab Hub</div>
-        <div class="header-sub">Laboratório de Inovação e Física Aplicada — Bem-vindo(a)!</div>
-      </div>
-      <div class="header-right">
-        <div class="header-stat"><div class="header-stat-val">12</div><div class="header-stat-lbl">Bolsistas</div></div>
-        <div class="header-stat"><div class="header-stat-val">5</div><div class="header-stat-lbl">Projetos</div></div>
-        <div class="header-stat"><div class="header-stat-val">3</div><div class="header-stat-lbl">Eventos</div></div>
-      </div>
-    </div>
-
-    <div class="grid-4">
-      <div class="metric-card">
-        <div class="metric-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="metric-body"><div class="metric-val">12</div><div class="metric-label">Bolsistas ativos</div><div class="metric-delta up">↑ +2 este mês</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="metric-body"><div class="metric-val">5</div><div class="metric-label">Projetos em andamento</div><div class="metric-delta up">↑ +1 novo</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <div class="metric-body"><div class="metric-val">28</div><div class="metric-label">Produções acadêmicas</div><div class="metric-delta up">↑ +4 este mês</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <div class="metric-body"><div class="metric-val">3</div><div class="metric-label">Próximos eventos</div><div class="metric-delta up">↑ Semana ativa</div></div>
+        <div class="header-badge">LIFA</div>
+        <div class="header-sub">Laboratório de Inovação e Física Aplicada</div>
       </div>
     </div>
 
@@ -605,46 +549,14 @@
           </div>
         </div>
       </div>
-
-      <div class="content-card">
-        <div class="card-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Atividade Recente
-        </div>
-        <div class="card-desc">Últimas ações no sistema</div>
-        <div style="display:flex;flex-direction:column;gap:12px">
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--success);margin-top:5px;flex-shrink:0"></div>
-            <div><div style="font-size:13.5px;color:var(--text-primary)"><strong>Lucas Ferreira</strong> concluiu o módulo de análise</div><div style="font-size:11.5px;color:var(--text-muted);margin-top:2px">há 2 horas</div></div>
-          </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--blue);margin-top:5px;flex-shrink:0"></div>
-            <div><div style="font-size:13.5px;color:var(--text-primary)"><strong>Ana Sousa</strong> subiu novo documento ao Projeto Vento</div><div style="font-size:11.5px;color:var(--text-muted);margin-top:2px">há 4 horas</div></div>
-          </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--warning);margin-top:5px;flex-shrink:0"></div>
-            <div><div style="font-size:13.5px;color:var(--text-primary)"><strong>Evento:</strong> Seminário de Física Computacional agendado</div><div style="font-size:11.5px;color:var(--text-muted);margin-top:2px">hoje, 09:00</div></div>
-          </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-top:5px;flex-shrink:0"></div>
-            <div><div style="font-size:13.5px;color:var(--text-primary)"><strong>Pedro Alves</strong> foi inscrito como novo bolsista</div><div style="font-size:11.5px;color:var(--text-muted);margin-top:2px">ontem</div></div>
-          </div>
-          <div style="display:flex;gap:12px;align-items:flex-start">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--danger);margin-top:5px;flex-shrink:0"></div>
-            <div><div style="font-size:13.5px;color:var(--text-primary)"><strong>Projeto Helio</strong> prazo atualizado para 30/03</div><div style="font-size:11.5px;color:var(--text-muted);margin-top:2px">há 2 dias</div></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
-  <!-- PAGE: INSCRIÇÃO -->
+  <!-- INSCRIÇÃO -->
   <div class="page" id="page-inscricao">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">Cadastro · Formulário</div>
-        <div class="header-title">Inscrição e Cadastro</div>
-        <div class="header-sub">Registre novos bolsistas no laboratório LIFA</div>
+        <div class="header-badge">Cadastro</div>
       </div>
     </div>
 
@@ -653,65 +565,29 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
         Dados do Bolsista
       </div>
-      <div class="card-desc">Preencha os campos abaixo para registrar um novo membro</div>
 
-      <div class="grid-2">
+      <div class="grid-2" style="display: grid; grid-template-columns: 2.5fr 2fr 2fr; gap: 15px; align-content: center;">
         <div class="form-group">
-          <label class="form-label">Nome Completo *</label>
-          <input class="form-input" type="text" placeholder="Ex: Maria Luiza Santos" />
+          <label class="form-label">Nome Completo</label>
+          <input class="form-input" type="text"/>
         </div>
         <div class="form-group">
-          <label class="form-label">E-mail Institucional *</label>
-          <input class="form-input" type="email" placeholder="aluno@amf.edu.br" />
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <div class="form-group">
-          <label class="form-label">Matrícula *</label>
-          <input class="form-input" type="text" placeholder="Ex: 2024001234" style="font-family:var(--mono);font-size:13px" />
+          <label class="form-label">E-mail</label>
+          <input class="form-input" type="email"/>
         </div>
         <div class="form-group">
-          <label class="form-label">Tipo de Bolsa</label>
-          <select class="form-select">
-            <option>Iniciação Científica (CNPq)</option>
-            <option>Iniciação Tecnológica</option>
-            <option>PIBIC</option>
-            <option>Voluntário</option>
-          </select>
+          <label class="form-label">Matrícula</label>
+          <input class="form-input" type="text"/>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="form-label">Área de Estudo / Linha de Pesquisa *</label>
+        <label class="form-label" placeholder="Selecione a opção">Linha de Pesquisa *</label>
         <select class="form-select">
-          <option value="">Selecione a área...</option>
-          <option>Aerodinâmica Computacional</option>
-          <option>Energia Renovável e Turbinas</option>
-          <option>Física de Materiais</option>
-          <option>Sistemas Embarcados e IoT</option>
-          <option>Mecânica dos Fluidos</option>
-          <option>Machine Learning Aplicado</option>
+          <option value="" disabled selected >Selecione uma opção</option>
+          <option>Otimização de pás de turbinas eólicas</option>
+          <option>Geotecnologias</option>
         </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Orientador(a)</label>
-        <input class="form-input" type="text" placeholder="Nome do(a) orientador(a)" />
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Período de Vigência</label>
-        <div class="grid-2">
-          <input class="form-input" type="date" />
-          <input class="form-input" type="date" />
-        </div>
-        <div class="form-hint">Data de início e término previsto</div>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">Nota / Observações</label>
-        <textarea class="form-textarea" placeholder="Informações adicionais sobre o bolsista, competências específicas, etc."></textarea>
       </div>
 
       <div class="form-group">
@@ -740,92 +616,27 @@
     </div>
   </div>
 
-  <!-- PAGE: DASHBOARD -->
+  <!-- DASHBOARD -->
   <div class="page" id="page-dashboard">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">Dados · Tempo Real</div>
-        <div class="header-title">Dashboard Geral</div>
-        <div class="header-sub">Visão consolidada das atividades do laboratório</div>
-      </div>
-      <div class="header-right">
-        <div class="header-stat"><div class="header-stat-val">87%</div><div class="header-stat-lbl">Meta cumprida</div></div>
-      </div>
-    </div>
-
-    <div class="grid-4">
-      <div class="metric-card">
-        <div class="metric-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-        <div class="metric-body"><div class="metric-val">12</div><div class="metric-label">Bolsistas ativos</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="metric-body"><div class="metric-val">5</div><div class="metric-label">Projetos ativos</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <div class="metric-body"><div class="metric-val">28</div><div class="metric-label">Publicações</div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <div class="metric-body"><div class="metric-val">3</div><div class="metric-label">Concluídos</div></div>
+        <div class="header-badge">Dados</div>
       </div>
     </div>
 
     <div class="grid-2">
       <div class="content-card">
-        <div class="card-title">Atividades por Mês</div>
-        <div class="card-desc">Publicações, eventos e projetos iniciados</div>
-        <canvas id="chartAtividades" height="200"></canvas>
-      </div>
-      <div class="content-card">
-        <div class="card-title">Distribuição por Área</div>
-        <div class="card-desc">Bolsistas por linha de pesquisa</div>
-        <canvas id="chartAreas" height="200"></canvas>
-      </div>
-    </div>
-
-    <div class="content-card">
-      <div class="card-title">Progresso dos Projetos Ativos</div>
-      <div class="card-desc">Acompanhamento de metas e entregas</div>
-      <div style="display:flex;flex-direction:column;gap:16px;margin-top:4px">
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13.5px;font-weight:600">Otimizador NACA 4412</span><span style="font-size:13px;color:var(--blue);font-weight:700">78%</span></div>
-          <div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13.5px;font-weight:600">Sistema de Energia Solar BEM</span><span style="font-size:13px;color:var(--blue);font-weight:700">55%</span></div>
-          <div class="progress-bar"><div class="progress-fill" style="width:55%"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13.5px;font-weight:600">Análise CFD de Escoamento</span><span style="font-size:13px;color:var(--blue);font-weight:700">92%</span></div>
-          <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13.5px;font-weight:600">IoT para Monitoramento Ambiental</span><span style="font-size:13px;color:var(--blue);font-weight:700">34%</span></div>
-          <div class="progress-bar"><div class="progress-fill" style="width:34%"></div></div>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13.5px;font-weight:600">Simulação de Turbinas Eólicas</span><span style="font-size:13px;color:var(--blue);font-weight:700">61%</span></div>
-          <div class="progress-bar"><div class="progress-fill" style="width:61%"></div></div>
-        </div>
+        <div class="card-title">Quadro de horários dos bolsistas</div>
+        <canvas id="" height="200"></canvas>
       </div>
     </div>
   </div>
 
-  <!-- PAGE: PROJETOS -->
+  <!-- PROJETOS -->
   <div class="page" id="page-projetos">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">Gestão · Projetos</div>
-        <div class="header-title">Gestão de Projetos</div>
-        <div class="header-sub">Todos os projetos de pesquisa do LIFA</div>
-      </div>
-      <div class="header-right">
-        <button class="btn btn-primary" onclick="showToast('Novo projeto criado!')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          Novo Projeto
-        </button>
+        <div class="header-badge">Projetos</div>
       </div>
     </div>
 
@@ -847,9 +658,7 @@
           <thead>
             <tr>
               <th>Projeto</th>
-              <th>Área</th>
               <th>Responsável</th>
-              <th>Progresso</th>
               <th>Prazo</th>
               <th>Status</th>
               <th></th>
@@ -857,69 +666,43 @@
           </thead>
           <tbody>
             <tr>
-              <td><div style="font-weight:600">Otimizador NACA 4412</div><div style="font-size:11.5px;color:var(--text-muted)">PIBIC CNPq 2024</div></td>
-              <td><span class="tag tag-blue">Aerodinâmica</span></td>
-              <td>Sofia Lima</td>
-              <td><div style="width:100px"><div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div><div style="font-size:11px;color:var(--text-muted);margin-top:3px">78%</div></div></td>
+              <td><div style="font-weight:600">Otimizador NACA 4412</div>
+              <td>Bolsista 1</td>
               <td style="color:var(--text-muted);font-size:13px">30/06/2025</td>
               <td><span class="tag tag-blue">Em andamento</span></td>
               <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
             </tr>
             <tr>
-              <td><div style="font-weight:600">BEM Solar Power</div><div style="font-size:11.5px;color:var(--text-muted)">Iniciação Tecnológica</div></td>
-              <td><span class="tag tag-amber">Energia</span></td>
-              <td>Lucas Ferreira</td>
-              <td><div style="width:100px"><div class="progress-bar"><div class="progress-fill" style="width:55%"></div></div><div style="font-size:11px;color:var(--text-muted);margin-top:3px">55%</div></div></td>
+              <td><div style="font-weight:600">Geotecnologias/<div>
+              <td>Bolsista 2</td>
               <td style="color:var(--text-muted);font-size:13px">15/07/2025</td>
               <td><span class="tag tag-blue">Em andamento</span></td>
               <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
             </tr>
             <tr>
-              <td><div style="font-weight:600">Análise CFD</div><div style="font-size:11.5px;color:var(--text-muted)">Pós-Graduação LIFA</div></td>
-              <td><span class="tag tag-cyan">Fluidos</span></td>
-              <td>Ana Sousa</td>
-              <td><div style="width:100px"><div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div><div style="font-size:11px;color:var(--text-muted);margin-top:3px">92%</div></div></td>
+              <td><div style="font-weight:600">Análise de algoritmos genéticos</div>
+              <td>Bolsista 3</td>
               <td style="color:var(--text-muted);font-size:13px">20/03/2025</td>
               <td><span class="tag tag-green">Quase concluído</span></td>
-              <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
-            </tr>
-            <tr>
-              <td><div style="font-weight:600">IoT Ambiental</div><div style="font-size:11.5px;color:var(--text-muted)">Voluntário</div></td>
-              <td><span class="tag tag-green">Sistemas</span></td>
-              <td>Pedro Alves</td>
-              <td><div style="width:100px"><div class="progress-bar"><div class="progress-fill" style="width:34%"></div></div><div style="font-size:11px;color:var(--text-muted);margin-top:3px">34%</div></div></td>
-              <td style="color:var(--text-muted);font-size:13px">01/09/2025</td>
-              <td><span class="tag tag-amber">Em andamento</span></td>
-              <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
-            </tr>
-            <tr>
-              <td><div style="font-weight:600">Turbinas Eólicas Sim.</div><div style="font-size:11.5px;color:var(--text-muted)">PIBIC 2023</div></td>
-              <td><span class="tag tag-blue">Aerodinâmica</span></td>
-              <td>Camila Torres</td>
-              <td><div style="width:100px"><div class="progress-bar" style="background:#dde3f0"><div style="height:100%;width:100%;border-radius:99px;background:var(--success)"></div></div><div style="font-size:11px;color:var(--success);margin-top:3px">100%</div></div></td>
-              <td style="color:var(--text-muted);font-size:13px">12/12/2024</td>
-              <td><span class="tag tag-green">Concluído</span></td>
               <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
             </tr>
           </tbody>
         </table>
       </div>
+      <div>
+        <button class="btn btn-primary" onclick="">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Novo Projeto
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- PAGE: AGENDA -->
+  <!-- AGENDA -->
   <div class="page" id="page-agenda">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">Agenda · Eventos</div>
-        <div class="header-title">Agendas e Eventos</div>
-        <div class="header-sub">Calendário de eventos científicos e reuniões</div>
-      </div>
-      <div class="header-right">
-        <button class="btn btn-primary" onclick="addEvent()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          Novo Evento
-        </button>
+        <div class="header-badge">Agenda</div>
       </div>
     </div>
 
@@ -985,17 +768,21 @@
             <span class="tag tag-red">Congresso</span>
           </div>
         </div>
+        <div class="header-right">
+        <button class="btn btn-primary" onclick="">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Novo Evento
+        </button>
+      </div>
       </div>
     </div>
   </div>
 
-  <!-- PAGE: ALOCAÇÃO -->
+  <!-- ALOCAÇÃO -->
   <div class="page" id="page-alocacao">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">IA · Colaboração</div>
         <div class="header-title">Alocação Inteligente</div>
-        <div class="header-sub">Sugestões de colaboração baseadas em perfis e disponibilidade</div>
       </div>
     </div>
 
@@ -1008,10 +795,8 @@
         <div class="card-desc">Escolha um membro para ver sugestões de colaboração</div>
         <select class="form-select" onchange="updateCollab(this.value)" style="margin-bottom:16px">
           <option value="">Selecione...</option>
-          <option value="sofia">Sofia Lima — Aerodinâmica</option>
-          <option value="lucas">Lucas Ferreira — Energia Solar</option>
-          <option value="ana">Ana Sousa — Mecânica dos Fluidos</option>
-          <option value="pedro">Pedro Alves — IoT</option>
+          <option value="bolsista 1">Bolsista 1</option>
+          <option value="bolsista 1">Bolsista 2</option>
         </select>
 
         <div class="card-title" style="margin-top:8px">
@@ -1039,24 +824,19 @@
     </div>
   </div>
 
-  <!-- PAGE: DETALHE -->
+  <!-- DETALHE -->
   <div class="page" id="page-detalhe">
     <div class="page-header">
       <div class="header-left">
-        <div class="header-badge">Documentos · Produção</div>
-        <div class="header-title">Detalhe do Projeto</div>
-        <div class="header-sub">Otimizador NACA 4412 — Sofia Lima</div>
-      </div>
-      <div class="header-right">
-        <button class="btn btn-primary" onclick="showToast('Documento adicionado!')">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          Adicionar Doc
-        </button>
+        <div class="header-badge">Produção</div>
       </div>
     </div>
-
+    
     <div class="grid-2">
       <div class="content-card">
+        <input class="form-input" style="width:220px" type="text" placeholder="Buscar projeto..." />
+        <!-- isso so aparece depois que pesquisa -->
+        <!--
         <div class="card-title">Informações do Projeto</div>
         <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
           <div style="display:flex;gap:10px">
@@ -1073,16 +853,8 @@
           </div>
           <div style="display:flex;gap:10px">
             <div style="width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;color:var(--warning);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <div><div style="font-size:12px;color:var(--text-muted)">Status</div><div style="font-size:14px;font-weight:600">Em andamento <span class="tag tag-blue" style="margin-left:6px">78%</span></div></div>
+            <div><div style="font-size:12px;color:var(--text-muted)">Status</div><div style="font-size:14px;font-weight:600">Em andamento</div></div>
           </div>
-        </div>
-        <div class="divider"></div>
-        <div class="card-title">Progresso Geral</div>
-        <div class="progress-bar" style="height:10px;margin-top:8px"><div class="progress-fill" style="width:78%"></div></div>
-        <div style="display:flex;justify-content:space-between;margin-top:6px">
-          <span style="font-size:12px;color:var(--text-muted)">Início: Mar 2024</span>
-          <span style="font-size:12px;font-weight:700;color:var(--blue)">78% concluído</span>
-          <span style="font-size:12px;color:var(--text-muted)">Meta: Jun 2025</span>
         </div>
       </div>
 
@@ -1134,7 +906,7 @@
       </div>
     </div>
   </div>
-
+  -->
 </main>
 
 <!-- TOAST -->
