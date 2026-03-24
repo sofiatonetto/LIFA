@@ -1,0 +1,82 @@
+<div class="page" id="page-detalhe">
+    <div class="page-header">
+      <div class="header-left">
+        <div class="header-badge">Produção</div>
+      </div>
+    </div>
+    
+    <div class="grid-2">
+      <div class="content-card">
+        <input class="form-input" style="width:220px" type="text" placeholder="Buscar projeto..." />
+        <!-- isso so aparece depois que pesquisa -->
+        <!--
+        <div class="card-title">Informações do Projeto</div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+          <div style="display:flex;gap:10px">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(37,99,235,0.1);display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div><div style="font-size:12px;color:var(--text-muted)">Pesquisador Principal</div><div style="font-size:14px;font-weight:600">Sofia Lima</div></div>
+          </div>
+          <div style="display:flex;gap:10px">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(6,182,212,0.1);display:flex;align-items:center;justify-content:center;color:var(--cyan);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><div style="font-size:12px;color:var(--text-muted)">Área de Pesquisa</div><div style="font-size:14px;font-weight:600">Aerodinâmica Computacional</div></div>
+          </div>
+          <div style="display:flex;gap:10px">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;color:var(--success);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><div style="font-size:12px;color:var(--text-muted)">Período</div><div style="font-size:14px;font-weight:600">Mar 2024 — Jun 2025</div></div>
+          </div>
+          <div style="display:flex;gap:10px">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;color:var(--warning);flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div><div style="font-size:12px;color:var(--text-muted)">Status</div><div style="font-size:14px;font-weight:600">Em andamento</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="card-title">Produções Acadêmicas</div>
+        <div class="card-desc">Documentos, artigos e relatórios deste projeto</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="doc-item">
+            <div class="doc-icon" style="background:rgba(239,68,68,0.1);color:#dc2626"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="doc-info">
+              <div class="doc-name">Relatório Parcial Q1 2024.pdf</div>
+              <div class="doc-meta">PDF · 2.4 MB · 12 Jan 2024</div>
+            </div>
+            <button class="btn btn-ghost" onclick="showToast('Baixando arquivo...')">↓</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon" style="background:rgba(37,99,235,0.1);color:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="doc-info">
+              <div class="doc-name">Artigo COBEM 2024 — NACA Otimização.docx</div>
+              <div class="doc-meta">DOCX · 1.1 MB · 05 Mar 2024</div>
+            </div>
+            <button class="btn btn-ghost" onclick="showToast('Baixando arquivo...')">↓</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon" style="background:rgba(16,185,129,0.1);color:var(--success)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div class="doc-info">
+              <div class="doc-name">Dataset CST_NACA4412_results.csv</div>
+              <div class="doc-meta">CSV · 845 KB · 20 Mai 2024</div>
+            </div>
+            <button class="btn btn-ghost" onclick="showToast('Baixando arquivo...')">↓</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon" style="background:rgba(245,158,11,0.1);color:var(--warning)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="9" x2="9" y2="21"/><line x1="15" y1="9" x2="15" y2="21"/></svg></div>
+            <div class="doc-info">
+              <div class="doc-name">Apresentação Seminário Mar 2025.pptx</div>
+              <div class="doc-meta">PPTX · 6.8 MB · 14 Mar 2025</div>
+            </div>
+            <button class="btn btn-ghost" onclick="showToast('Baixando arquivo...')">↓</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon" style="background:rgba(88,28,135,0.1);color:#7c3aed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div class="doc-info">
+              <div class="doc-name">pipeline_naca_optimizer.py</div>
+              <div class="doc-meta">Python · 48 KB · 10 Fev 2025</div>
+            </div>
+            <button class="btn btn-ghost" onclick="showToast('Baixando arquivo...')">↓</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->

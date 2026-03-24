@@ -1,0 +1,64 @@
+<div class="page" id="page-projetos">
+    <div class="page-header">
+      <div class="header-left">
+        <div class="header-badge">Projetos</div>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+        <div class="card-title" style="margin-bottom:0">Lista de Projetos</div>
+        <div style="display:flex;gap:8px">
+          <input class="form-input" style="width:220px" type="text" placeholder="Buscar projeto..." />
+          <select class="form-select" style="width:160px">
+            <option>Todos os status</option>
+            <option>Em andamento</option>
+            <option>Concluído</option>
+            <option>Pausado</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Responsável</th>
+              <th>Prazo</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="font-weight:600">Otimizador NACA 4412</div>
+              <td>Bolsista 1</td>
+              <td style="color:var(--text-muted);font-size:13px">30/06/2025</td>
+              <td><span class="tag tag-blue">Em andamento</span></td>
+              <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600">Geotecnologias/<div>
+              <td>Bolsista 2</td>
+              <td style="color:var(--text-muted);font-size:13px">15/07/2025</td>
+              <td><span class="tag tag-blue">Em andamento</span></td>
+              <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
+            </tr>
+            <tr>
+              <td><div style="font-weight:600">Análise de algoritmos genéticos</div>
+              <td>Bolsista 3</td>
+              <td style="color:var(--text-muted);font-size:13px">20/03/2025</td>
+              <td><span class="tag tag-green">Quase concluído</span></td>
+              <td><button class="btn btn-ghost" onclick="navigate('detalhe')">Ver</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <button class="btn btn-primary" onclick="">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Novo Projeto
+        </button>
+      </div>
+    </div>
+  </div>
