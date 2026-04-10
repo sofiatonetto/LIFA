@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Lab Hub — LIFA</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    
+    <link href="css/css.css" rel="stylesheet" />
+</head>
+<body>
+
+<aside id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">
+      <img src="img/FOTO PERFIL.png" alt="Logo LIFA" style="width: 50px;">
+    </div>
+    <div class="logo-text">
+      <div class="logo-title">Smart Lab Hub</div>
+      <div class="logo-sub">LIFA</div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <span class="nav-section-label">Principal</span>
+
+    <a class="nav-item active" href="/index.html">
+      Início
+    </a>
+
+    <a class="nav-item" href="/html/inscricao.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+      Inscrição e Cadastro
+    </a>
+
+    <a class="nav-item" href="/html/dashboard.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Dashboard Geral
+    </a>
+
+    <span class="nav-section-label">Gestão</span>
+
+    <button class="nav-item" onclick="navigate('html/projetos.html')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Gestão de Projetos
+    </button>
+
+    <button class="nav-item" onclick="navigate('html/agenda.html')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Agendas e Eventos
+    </button>
+
+    <button class="nav-item" onclick="navigate('html/alocacao.html')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Alocação Inteligente
+    </button>
+
+    <button class="nav-item" onclick="navigate('html/detalhes.html')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Detalhes
+    </button>
+  </nav>
+</aside>
+
+<main id="main-content">
+  <div id="page-loader" class="page active">
+    <div class="page-header">
+      <div class="header-left">
+        <div class="header-badge">LIFA</div>
+        <div class="header-sub">Laboratório de Inovação e Física Aplicada</div>
+      </div>
+    </div>
+    <div class="grid-2">
+        <div class="content-card">
+            <h3>Bem-vindo ao Smart Lab Hub</h3>
+            <p>Selecione um módulo no menu lateral para começar a gestão do laboratório.</p>
+        </div>
+    </div>
+  </div>
+</main>
+
+<div id="toast">
+  <span id="toastMsg">Ação realizada com sucesso!</span>
+</div>
+
+<script>
+async function navigate(page) {
+  const main = document.getElementById('main-content');
+  
+  document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.querySelector(`[onclick="navigate('${page}')"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  if (page === 'inicio') {
+      location.reload(); 
+      return;
+  }
+
+  try {
+      const response = await fetch(`./html/${page}.html`);
+      if (!response.ok) throw new Error('Página não encontrada');
+      
+      const html = await response.text();
+      
+      main.innerHTML = html;
+
+      if (page === 'dashboard') typeof initCharts === 'function' && initCharts();
+      if (page === 'agenda') typeof renderCalendar === 'function' && renderCalendar();
+      
+  } catch (err) {
+      main.innerHTML = `<div class="content-card"><h2>Erro 404</h2><p>A página ${page}.html não foi encontrada na pasta /html.</p></div>`;
+  }
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>
