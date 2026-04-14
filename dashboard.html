@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Lab Hub - Sistema Integrado</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="css.css" />
+  <style>
+    /* Lógica de troca de páginas */
+    .content-section { display: none; }
+    .content-section.active { display: block; }
+  </style>
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <img src="img/FOTO PERFIL.png" alt="Logo" style="width: 50px; border-radius: 8px;">
+      <div class="logo-text">
+        <div class="logo-title">Smart Lab Hub</div>
+        <div class="logo-sub">LIFA</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a class="nav-item active" href="#" onclick="showPage('dashboard')">Dashboard Geral</a>
+      <a class="nav-item" href="#" onclick="showPage('inscricao')">Inscrição</a>
+      
+      <span class="nav-section-label">Gestão</span>
+      <a class="nav-item" href="#" onclick="showPage('projetos')">Gestão de Projetos</a>
+      <a class="nav-item" href="#" onclick="showPage('agenda')">Agendas e Eventos</a>
+      <a class="nav-item" href="#" onclick="showPage('alocacao')">Alocação Inteligente</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    
+    <section id="dashboard" class="content-section active">
+      <div class="header-content"><h1>Dashboard Geral</h1></div>
+      <div class="grid-2">
+        <div class="content-card"><canvas id="chartStatus"></canvas></div>
+        <div class="content-card"><h3>Resumo de Atividades</h3></div>
+      </div>
+    </section>
+
+    <section id="inscricao" class="content-section">
+      <div class="header-content"><h1>Inscrição e Cadastro</h1></div>
+      <div class="content-card">
+        <form action="/cadastrar" method="POST" enctype="multipart/form-data">
+          <input type="text" name="nome" placeholder="Nome Completo" class="form-input">
+          <input type="text" name="matricula" placeholder="Matrícula" class="form-input">
+          <input type="file" name="grade_foto" class="form-input">
+          <button type="submit" class="btn-primary">Salvar no Banco</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="projetos" class="content-section">
+      <div class="header-content"><h1>Gestão de Projetos</h1></div>
+      <div class="content-card" id="lista-projetos">
+        </div>
+    </section>
+
+    <section id="agenda" class="content-section">
+      <div class="header-content"><h1>Agenda e Eventos</h1></div>
+      <div class="grid-2">
+        <div class="content-card"><h3>Calendário</h3></div>
+        <div class="content-card"><h3>Próximas Apresentações</h3></div>
+      </div>
+    </section>
+
+    <section id="alocacao" class="content-section">
+      <div class="header-content"><h1>Alocação Inteligente</h1></div>
+      <div class="grid-2">
+        <div class="content-card"><h3>Filtros</h3></div>
+        <div class="content-card"><h3>Sugestões</h3></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Função para trocar de "página" sem recarregar
+    function showPage(sectionId) {
+      // Esconde todas as seções
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      // Remove o 'active' dos botões do menu
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      // Mostra a seção clicada
+      document.getElementById(sectionId).classList.add('active');
+      // Adiciona o 'active' no link clicado
+      event.currentTarget.classList.add('active');
+    }
+    
+    const ctx = document.getElementById('chartStatus');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Física', 'Geo', 'Engenharia'],
+        datasets: [{ label: 'Bolsistas', data: [5, 8, 3], backgroundColor: '#2563eb' }]
+      }
+    });
+  </script>
+</body>
+</html>

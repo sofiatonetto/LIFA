@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alocação Inteligente - Smart Lab Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <img src="img/FOTO PERFIL.png" alt="Logo LIFA" style="width: 50px; border-radius: 8px; margin-bottom: 10px;">
+      </div>
+      <div class="logo-text">
+        <div class="logo-title">Lab Hub</div>
+        <div class="logo-sub">LIFA</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a class="nav-item" href="index.html">Início</a>
+      <a class="nav-item" href="inscricao.html">Inscrição e Cadastro</a>
+      <a class="nav-item" href="dashboard.html">Dashboard Geral</a>
+      
+      <span class="nav-section-label">Gestão</span>
+      <a class="nav-item" href="projetos.html">Gestão de Projetos</a>
+      <a class="nav-item" href="agenda.html">Agendas e Eventos</a>
+      <a class="nav-item active" href="alocacao.html">Alocação Inteligente</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="page active">
+      
+      <div class="header-content" style="margin-bottom: 25px;">
+        <p style="text-transform: uppercase; font-size: 11px; font-weight: bold; color: var(--azul-botao); letter-spacing: 1px;">Inteligência</p>
+        <h1 style="font-size: 28px; color: var(--azul-escuro);">Alocação Inteligente</h1>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+        
+        <div class="content-card">
+          <div class="card-title" style="color: var(--azul-escuro); font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg style="width:20px; color: var(--azul-botao);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            Selecione um Bolsista
+          </div>
+          
+          <select class="form-select" id="select-bolsista" name="bolsista_id" style="margin-bottom:24px; color: var(--azul-escuro);">
+            <option value="">Selecione pelo nome...</option>
+            </select>
+
+          <div class="card-title" style="color: var(--azul-escuro); font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg style="width:20px; color: var(--azul-botao);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Grade de Horários
+          </div>
+          
+          <div id="grade-container" style="margin-top: 15px; border-radius: 8px; border: 1px solid #eee; min-height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #fafafa;">
+             <p style="color: #999; font-size: 12px; text-align: center; padding: 20px;">
+               A foto da grade aparecerá aqui ao selecionar um bolsista
+             </p>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <div class="card-title" style="color: var(--azul-escuro); font-weight: bold; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+            <svg style="width:20px; color: var(--azul-botao);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
+            Projetos e Colaborações
+          </div>
+          <div class="card-desc" style="font-size: 13px; color: #666; margin-bottom: 20px;">
+            Projetos vinculados a este bolsista no banco
+          </div>
+          
+          <div style="display:flex; flex-direction:column; gap:12px" id="lista-projetos-bolsista">
+            <div style="text-align:center; padding:30px; border: 1px dashed #ddd; border-radius: 8px;">
+              <span style="font-size: 12px; color: #aaa;">Nenhum dado carregado</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px;">
+             <p style="font-size: 11px; color: #777; margin-bottom: 10px;">Ação rápida:</p>
+             <button class="btn-primary" style="width: 100%;">Vincular a Novo Projeto</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

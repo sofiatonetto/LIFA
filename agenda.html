@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda - Smart Lab Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <img src="img/FOTO PERFIL.png" alt="Logo LIFA" style="width: 50px; border-radius: 8px; margin-bottom: 10px;">
+      </div>
+      <div class="logo-text">
+        <div class="logo-title">Smart Lab Hub</div>
+        <div class="logo-sub">LIFA</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a class="nav-item" href="index.html">Início</a>
+      <a class="nav-item" href="inscricao.html">Inscrição e Cadastro</a>
+      <a class="nav-item" href="dashboard.html">Dashboard Geral</a>
+      
+      <span class="nav-section-label">Gestão</span>
+      <a class="nav-item" href="projetos.html">Gestão de Projetos</a>
+      <a class="nav-item active" href="agenda.html">Agendas e Eventos</a>
+      <a class="nav-item" href="alocacao.html">Alocação Inteligente</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="page active">
+      
+      <div class="header-content" style="margin-bottom: 25px;">
+        <p style="text-transform: uppercase; font-size: 11px; font-weight: bold; color: var(--azul-botao); letter-spacing: 1px;">Gestão de Tempo</p>
+        <h1 style="font-size: 28px; color: var(--azul-escuro);">Agendas e Eventos</h1>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; width: 100%;">
+        
+        <div class="content-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="color: var(--azul-escuro);" id="calTitle">Março 2025</h3>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-secondary" style="padding: 5px 15px;">&#8249;</button>
+                <button class="btn-secondary" style="padding: 5px 15px;">&#8250;</button>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center; font-weight: bold; color: var(--azul-escuro); font-size: 12px; margin-bottom: 10px;">
+            <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+          </div>
+          <div id="calGrid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;">
+            <div style="padding: 12px; background: #f8fafc; border-radius: 8px; color: #ccc; text-align: center;">26</div>
+            <div style="padding: 12px; background: #f8fafc; border-radius: 8px; color: #ccc; text-align: center;">27</div>
+            <div style="padding: 12px; background: #f8fafc; border-radius: 8px; color: #ccc; text-align: center;">28</div>
+            <div style="padding: 12px; background: white; border: 1px solid #eee; border-radius: 8px; text-align: center; color: var(--azul-escuro);">1</div>
+            <div style="padding: 12px; background: var(--azul-botao); color: white; border-radius: 8px; text-align: center; font-weight: bold;">2</div>
+            <div style="padding: 12px; background: white; border: 1px solid #eee; border-radius: 8px; text-align: center; color: var(--azul-escuro);">3</div>
+            </div>
+        </div>
+
+        <div class="content-card">
+          <h3 style="color: var(--azul-escuro); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <svg style="width:20px; color: var(--azul-botao);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+            Próximos Eventos
+          </h3>
+          <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Compromissos e apresentações do laboratório</p>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            
+            <div style="padding-bottom: 15px; border-bottom: 1px solid #eee;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--azul-botao); margin-top: 6px;"></div>
+                <div style="flex: 1;">
+                  <div style="font-weight: bold; color: var(--azul-escuro); font-size: 15px;">Seminário de Física Computacional</div>
+                  <div style="font-size: 12px; color: #777; margin-bottom: 8px;">19 Mar 2025 · 14h00 · Auditório B</div>
+                  
+                  <div style="display: flex; gap: 5px; flex-wrap: wrap;">
+                    <span style="font-size: 10px; background: #eef2ff; color: var(--azul-botao); padding: 2px 8px; border-radius: 4px; border: 1px solid #e0e7ff;">Apresentador: Bolsista 1</span>
+                    <span style="font-size: 10px; background: #eef2ff; color: var(--azul-botao); padding: 2px 8px; border-radius: 4px; border: 1px solid #e0e7ff;">Apresentador: Bolsista 3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-bottom: 15px; border-bottom: 1px solid #eee;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; margin-top: 6px;"></div>
+                <div style="flex: 1;">
+                  <div style="font-weight: bold; color: var(--azul-escuro); font-size: 15px;">Workshop de Otimização</div>
+                  <div style="font-size: 12px; color: #777; margin-bottom: 8px;">28 Mar 2025 · 09h00 · Lab. 04</div>
+                  
+                  <div style="display: flex; gap: 5px;">
+                    <span style="font-size: 10px; background: #ecfdf5; color: #10b981; padding: 2px 8px; border-radius: 4px; border: 1px solid #d1fae5;">Apresentador: Bolsista 2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div style="margin-top: 25px;">
+            <button class="btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg style="width:18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                Novo Evento
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

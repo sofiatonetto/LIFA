@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscrição - Smart Lab Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <img src="img/FOTO PERFIL.png" alt="Logo LIFA" style="width: 50px; border-radius: 8px;">
+      <div class="logo-text">
+        <div class="logo-title">Lab Hub</div>
+        <div class="logo-sub">LIFA</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Principal</span>
+      <a class="nav-item" href="index.html">Início</a>
+      <a class="nav-item active" href="inscricao.html">Inscrição e Cadastro</a>
+      <a class="nav-item" href="dashboard.html">Dashboard</a>
+      
+      <span class="nav-section-label">Gestão</span>
+      <a class="nav-item" href="projetos.html">Projetos</a>
+      <a class="nav-item" href="agenda.html">Agenda</a>
+      <a class="nav-item" href="alocacao.html">Alocação</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="page active">
+      
+      <div class="header-banner" style="background: #1e293b; color: white; padding: 35px; border-radius: 16px; margin-bottom: 25px;">
+        <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; font-weight: 700;">Módulo de Admissão</span>
+        <h1 style="font-size: 32px; margin-top: 8px;">Inscrição de Novo Bolsista</h1>
+        <p style="opacity: 0.7; font-size: 14px; margin-top: 5px;">Preencha os dados abaixo para sincronizar com o banco de dados LIFA.</p>
+      </div>
+
+      <form action="/cadastrar" method="POST" enctype="multipart/form-data" class="content-card" style="max-width: 900px; margin: 0 auto;">
+        
+        <h3 style="margin-bottom: 25px; display: flex; align-items: center; gap: 10px; color: var(--text-main);">
+          <svg style="width:24px; color: var(--primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          </svg>
+          Informações do Candidato
+        </h3>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+          <div class="form-group">
+            <label class="form-label" style="font-weight: 600;">Nome Completo</label>
+            <input class="form-input" type="text" name="nome" placeholder="Ex: João Silva" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-weight: 600;">Matrícula</label>
+            <input class="form-input" type="text" name="matricula" placeholder="Apenas números" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-weight: 600;">E-mail Acadêmico</label>
+            <input class="form-input" type="email" name="email" placeholder="nome@universidade.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="font-weight: 600;">Linha de Pesquisa</label>
+            <select class="form-select" name="linha_pesquisa" required>
+              <option value="" disabled selected>Selecione a área...</option>
+              <option value="Otimização de pás">Otimização de pás de turbinas eólicas</option>
+              <option value="Geotecnologias">Geotecnologias</option>
+              <option value="Física Aplicada">Física Aplicada</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 30px;">
+          <label class="form-label" style="font-weight: 600;">Grade Horária / Currículo (JPG ou PDF)</label>
+          <label for="file-upload" class="upload-zone" style="cursor: pointer; padding: 50px; border: 2px dashed #cbd5e1; background: #f8fafc; display: flex; flex-direction: column; align-items: center; transition: 0.3s; border-radius: 12px;">
+            <input id="file-upload" type="file" name="grade_foto" accept="image/jpeg,application/pdf" style="display: none;" onchange="updateFileName(this)" />
+            
+            <div id="upload-icon-container" style="background: white; padding: 20px; border-radius: 50%; box-shadow: var(--card-shadow); margin-bottom: 15px;">
+              <svg style="width:40px; color: var(--primary);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            
+            <p style="font-size: 16px; color: var(--text-main); font-weight: 500;" id="file-name-display">Clique para selecionar ou arraste o arquivo</p>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Tamanho máximo: 5MB</p>
+          </label>
+        </div>
+
+        <div style="display:flex; gap:12px; justify-content:flex-end; margin-top: 40px; border-top: 1px solid #f1f5f9; padding-top: 25px;">
+          <button type="reset" class="btn-secondary" style="padding: 12px 25px;">Limpar Formulário</button>
+          <button type="submit" class="btn-primary" style="padding: 12px 35px; font-size: 15px;">Finalizar Inscrição</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    function updateFileName(input) {
+      const display = document.getElementById('file-name-display');
+      if (input.files && input.files[0]) {
+        display.innerHTML = `<strong>Selecionado:</strong> ${input.files[0].name}`;
+        display.style.color = "#10b981"; // Verde sucesso
+      }
+    }
+  </script>
+</body>
+</html>
