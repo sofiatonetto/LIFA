@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - LIFA</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<aside class="sidebar">
+    <div class="sidebar-header">
+        <div class="logo-placeholder">
+            <img src="img/FOTO PERFIL.png" alt="LIFA Logo" onerror="this.style.display='none'">
+            <span>LIFA</span>
+        </div>
+    </div>
+
+    <nav class="nav-group">
+        <p class="nav-title">Principal</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <nav class="nav-group">
+        <p class="nav-title">Gestão</p>
+        <ul>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="alocacao.html">Alocação</a></li>
+            <li><a href="agenda.html">Processos</a></li>
+            <li>Demanda</li>
+        </ul>
+    </nav>
+
+    <div class="user-profile">
+        <span class="user-name">Silvana</span>
+        <div class="avatar">S</div>
+    </div>
+</aside>
+
+<main class="content">
+    <header class="main-banner">
+        <h1>Módulo cadastro</h1>
+    </header>
+
+    <section class="form-container">
+        <form id="inscricao-form">
+            <div class="grid-form">
+                <div class="form-group col-span-2">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Matrícula</label>
+                    <input type="text" id="matricula" name="matricula">
+                </div>
+
+                <div class="form-group">
+                    <label for="pesquisa">Linha de pesquisa</label>
+                    <input type="text" id="pesquisa" name="pesquisa">
+                </div>
+                <div class="form-group col-span-2">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group col-full">
+                    <label>Grade de horários</label>
+                    <div class="upload-area">
+                        <div class="upload-icon">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><line x1="17" y1="8" x2="12" y2="3"></line><line x1="12" y1="3" x2="7" y2="8"></line><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        </div>
+                        <p>Faça o upload da grade de horário do bolsista</p>
+                        <small>PDF ou JPG</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset" class="btn-clear">Limpar</button>
+                <button type="submit" class="btn-submit">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
